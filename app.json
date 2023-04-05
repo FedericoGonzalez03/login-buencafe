@@ -1,5 +1,6 @@
 {
   "expo": {
+    "owner":"xfefo",
     "name": "login-buencafe",
     "slug": "login-buencafe",
     "version": "1.0.0",
