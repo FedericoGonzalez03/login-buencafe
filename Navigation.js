@@ -1,5 +1,5 @@
 import 'react-native-gesture-handler';
-import { createStackNavigator } from '@react-navigation/stack';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import Login from './src/screens/Login';
 import Register from './src/screens/Register';
 import React from 'react';
@@ -21,13 +21,13 @@ const horizontalAnimation = {
   },
 };
 
-const Stack = createStackNavigator();
+const Stack = createNativeStackNavigator();
 
 export default function Navigation() {
   return (
     <Stack.Navigator initialRouteName="Login"
     screenOptions={{
-      headerMode: 'hidden'
+      headerShown:false
       }}>
       <Stack.Screen name="Login" options={horizontalAnimation} component={Login} />
       <Stack.Screen name="Register" options={horizontalAnimation}  component={Register} />
