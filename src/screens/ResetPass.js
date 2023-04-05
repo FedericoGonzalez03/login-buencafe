@@ -11,33 +11,21 @@ import {
 import logoBC from "../../assets/logoBC.png";
 import arrow from "../../assets/arrow.png";
 
-export default function Register({ navigation }) {
+export default function Login({ navigation }) {
   return (
     <View style={styles.container}>
       <Image style={styles.image} source={logoBC}></Image>
-      <TextInput
-        placeholder="Nombre"
-        placeholderTextColor={"#777"}
-        style={styles.input}
-      ></TextInput>
-      <TextInput
-        placeholder="Apellidos"
-        placeholderTextColor={"#777"}
-        style={styles.input}
-      ></TextInput>
+      <Text style={styles.links}>Escribe tu correo electrónico y
+       te enviaremos una nueva contraseña, cambiala en tu perfil 
+       al iniciar sesión</Text>
       <TextInput
         placeholder="Email"
         placeholderTextColor={"#777"}
         style={styles.input}
       ></TextInput>
-      <TextInput
-        placeholder="Contraseña"
-        placeholderTextColor={"#777"}
-        style={styles.input}
-      ></TextInput>
       <TouchableOpacity>
         <View style={styles.btnCont}>
-          <Text style={styles.btnText}> Registrarme </Text>
+          <Text style={styles.btnText}> Resetear Contraseña </Text>
         </View>
       </TouchableOpacity>
       <TouchableOpacity onPress={navigation.goBack} style={styles.backCont}>
@@ -86,6 +74,11 @@ const styles = StyleSheet.create({
     fontWeight: 700,
     textAlign:"center",
     fontSize: 17,
+  },
+  links: {
+    color: "#048",
+    fontSize: 13.5,
+    textAlign:"center"
   },
   backCont: {
     flex:1,

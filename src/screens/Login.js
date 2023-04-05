@@ -6,6 +6,7 @@ import {
   Image,
   TextInput,
   TouchableOpacity,
+  StatusBar
 } from "react-native";
 import logoBC from "../../assets/logoBC.png";
 
@@ -28,16 +29,19 @@ export default function Login({ navigation }) {
           <Text style={styles.btnText}> Iniciar Sesión </Text>
         </View>
       </TouchableOpacity>
-      <TouchableOpacity
+      <TouchableOpacity style={{marginTop:60}}
         onPress={() => {
           navigation.navigate("Register");
         }}
       >
         <Text style={styles.links}>¿No tienes cuenta?, Regístrate</Text>
       </TouchableOpacity>
-      <TouchableOpacity>
+      <TouchableOpacity onPress={() => {
+          navigation.navigate("ResetPass");
+        }}>
         <Text style={styles.links}>¿Olvidaste tu contraseña?</Text>
       </TouchableOpacity>
+      <StatusBar style='dark-content'></StatusBar>
     </View>
   );
 }
@@ -65,15 +69,20 @@ const styles = StyleSheet.create({
     marginBottom: 15,
   },
   btnCont: {
-    paddingHorizontal: 50,
+    position:"absolute",
+    width:"60%",
     paddingVertical: 7,
     backgroundColor: "#f55",
     borderRadius: 6,
     marginBottom: 20,
+    alignSelf:"center",
   },
   btnText: {
+    position:"relative",
+    width:"100%",
     color: "#fff",
     fontWeight: 700,
+    textAlign:"center",
     fontSize: 17,
   },
   links: {
