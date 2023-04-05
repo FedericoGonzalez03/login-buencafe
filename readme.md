@@ -1,0 +1,1 @@
+https://expo.dev/@xfefo/login-bueencafe?serviceType=classic&distribution=expo-go
