@@ -1,6 +1,6 @@
 {
   "expo": {
-    "owner":"xfefo",
+    "owner": "xfefo",
     "name": "login-buencafe",
     "slug": "login-buencafe",
     "version": "1.0.0",
@@ -16,7 +16,8 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.xfefo.loginbuencafe"
     },
     "android": {
       "adaptiveIcon": {
