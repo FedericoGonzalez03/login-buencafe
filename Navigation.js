@@ -27,6 +27,7 @@ const Stack = createStackNavigator();
 export default function Navigation() {
   return (
     <Stack.Navigator initialRouteName="Login"
+    useLegacyImplementation={true}
     screenOptions={{
       headerShown:false
       }}>
